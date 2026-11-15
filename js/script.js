@@ -245,3 +245,22 @@ if (scrollTopBtn) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
+
+// ===== Hero Video Autoplay Assurance =====
+const heroVid = document.getElementById('heroVideo');
+if (heroVid) {
+    heroVid.muted = true;
+    heroVid.defaultMuted = true;
+    const playVideo = () => {
+        const p = heroVid.play();
+        if (p && typeof p.catch === 'function') {
+            p.catch(() => {});
+        }
+    };
+    playVideo();
+    document.addEventListener('DOMContentLoaded', playVideo);
+    window.addEventListener('load', playVideo);
+    ['click', 'touchstart', 'scroll'].forEach(evt => {
+        window.addEventListener(evt, playVideo, { once: true });
+    });
+}
