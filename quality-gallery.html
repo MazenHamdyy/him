@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فعاليات وصور الجودة | معهد HIM</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="quality-gallery">
+    <div id="site-header"></div>
+
+    <section class="page-hero" style="background-image: url('images/quality/program-2/1.jpg')">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <i class="fas fa-chevron-left"></i>
+                <span>جودة</span>
+                <i class="fas fa-chevron-left"></i>
+                <span>فعاليات وصور الجودة</span>
+            </nav>
+            <h1>فعاليات وصور وحدة ضمان الجودة</h1>
+            <p>تغطية مصورة للبرامج التدريبية للهيئة القومية لضمان جودة التعليم والاعتماد بمعهد <span class="latin">HIM</span></p>
+        </div>
+    </section>
+
+    <section class="quality-section">
+        <div class="container">
+            <!-- Featured Report from Word Document -->
+            <div class="quality-report-card reveal">
+                <span class="quality-report-tag">
+                    <i class="fas fa-award"></i> الهيئة القومية لضمان جودة التعليم والاعتماد (NAQAAE)
+                </span>
+                <h2>تنفيذ البرامج التدريبية للهيئة القومية لضمان جودة التعليم والاعتماد بالمعهد العالي للإدارة بالمحلة الكبرى</h2>
+                <p>
+                    في إطار سعي المعهد العالي للإدارة بالمحلة الكبرى المستمر نحو تحقيق التميز والارتقاء بمستوى العملية التعليمية، استقبل المعهد على مدار يومين معالي <strong>الأستاذ الدكتور/ سعد زغلول الدمراوي</strong>، المدرب بإدارة التدريب بالهيئة القومية لضمان جودة التعليم والاعتماد التابعة لرئاسة مجلس الوزراء المصري، لتدريب السادة أعضاء هيئة التدريس ومعاونيهم وموظفي المعهد على برامج الجودة، والتي تعد جزءاً هاماً من استراتيجيتنا للتطوير المهني المستمر وتعزيز كفاءات أعضاء هيئة التدريس وجميع العاملين بالمعهد.
+                </p>
+                <p>
+                    وتهدف هذه البرامج التدريبية إلى تمكين جميع العاملين بالمعهد من أحدث الأساليب والمنهجيات التعليمية، وكيفية تطبيق معايير الجودة في العملية التعليمية؛ حيث شمل البرنامج التدريبي جلسات نقاشية، وورش عمل تفاعلية، وحالات دراسية تطبيقية تساهم في تعزيز قدراتهم ومهاراتهم المهنية، والتي تمثل حجر الزاوية في رفع مستوى جودة منظومة التعليم وتحقيق الاعتماد الأكاديمي، مما يُسهم في تعزيز مكانة المعهد التعليمية على الصعيدين الوطني والدولي.
+                </p>
+                <p>
+                    وفي نهاية الدورة، كرّم السيد <strong>الأستاذ/ محمد مراد</strong> رئيس مجلس إدارة المعهد، و<strong>الأستاذ الدكتور/ أحمد أبو القمصان</strong> عميد المعهد، و<strong>الأستاذة/ شيماء عدلي</strong> عضو مجلس الإدارة، و<strong>الأستاذ/ عمر مراد</strong> الأمين العام للمعهد، معالي <strong>الأستاذ الدكتور/ سعد زغلول الدمراوي</strong>، ومنحوه درع التقدير من المعهد وذلك على الجهد المبذول من سيادته خلال الدورة.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="quality-gallery-filters reveal" id="qualityFilters">
+                <button class="quality-filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i> الكل (23 صورة)
+                </button>
+                <button class="quality-filter-btn" data-filter="program-2">
+                    <i class="fas fa-certificate"></i> البرنامج التدريبي الثاني (11 صورة)
+                </button>
+                <button class="quality-filter-btn" data-filter="program-1">
+                    <i class="fas fa-award"></i> البرنامج التدريبي الأول (12 صورة)
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="quality-gallery-grid" id="qualityGalleryGrid"></div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="quality-lightbox" id="qualityLightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة">
+        <button class="quality-lb-close" id="qlbClose" aria-label="إغلاق"><i class="fas fa-times"></i></button>
+        <button class="quality-lb-nav quality-lb-prev" id="qlbPrev" aria-label="السابق"><i class="fas fa-chevron-right"></i></button>
+        <button class="quality-lb-nav quality-lb-next" id="qlbNext" aria-label="التالي"><i class="fas fa-chevron-left"></i></button>
+        <div class="quality-lightbox-inner">
+            <img src="" alt="" class="quality-lightbox-img" id="qlbImg">
+            <div class="quality-lightbox-meta">
+                <span id="qlbCaption"></span>
+                <span id="qlbCounter"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="site-footer"></div>
+
+    <script src="js/layout.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        (function () {
+            const program2Photos = ['1','2','3','5','7','8','9','10','11','13','14'].map((n, idx) => ({
+                src: `images/quality/program-2/${n}.jpg`,
+                group: 'program-2',
+                badge: 'البرنامج التدريبي الثاني',
+                caption: `البرنامج التدريبي الثاني للهيئة القومية لضمان جودة التعليم والاعتماد — لقطة ${idx + 1}`
+            }));
+
+            const program1Photos = ['1','2','3','4','5','6','7','8','9','11','12','14'].map((n, idx) => ({
+                src: `images/quality/program-1/${n}.jpg`,
+                group: 'program-1',
+                badge: 'البرنامج التدريبي الأول',
+                caption: `البرنامج التدريبي الأول للهيئة القومية لضمان جودة التعليم والاعتماد — لقطة ${idx + 1}`
+            }));
+
+            const allPhotos = [...program2Photos, ...program1Photos];
+            let currentList = allPhotos;
+            let currentIndex = 0;
+
+            const grid = document.getElementById('qualityGalleryGrid');
+            const filters = document.getElementById('qualityFilters');
+            const lightbox = document.getElementById('qualityLightbox');
+            const lbImg = document.getElementById('qlbImg');
+            const lbCaption = document.getElementById('qlbCaption');
+            const lbCounter = document.getElementById('qlbCounter');
+
+            function render(filter) {
+                currentList = filter === 'all' ? allPhotos : allPhotos.filter(p => p.group === filter);
+                grid.innerHTML = currentList.map((p, i) => `
+                    <div class="quality-photo-card" data-index="${i}" tabindex="0">
+                        <img src="${p.src}" alt="${p.caption}" loading="lazy">
+                        <div class="quality-photo-overlay">
+                            <span class="quality-photo-badge">${p.badge}</span>
+                            <div class="quality-photo-caption">
+                                <span>${p.caption}</span>
+                                <span class="quality-photo-zoom"><i class="fas fa-expand"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                grid.querySelectorAll('.quality-photo-card').forEach(card => {
+                    const open = () => openLightbox(Number(card.dataset.index));
+                    card.addEventListener('click', open);
+                    card.addEventListener('keydown', e => { if (e.key === 'Enter') open(); });
+                });
+            }
+
+            function showPhoto(index) {
+                if (!currentList.length) return;
+                currentIndex = (index + currentList.length) % currentList.length;
+                const item = currentList[currentIndex];
+                lbImg.src = item.src;
+                lbImg.alt = item.caption;
+                lbCaption.textContent = item.caption;
+                lbCounter.textContent = `${currentIndex + 1} / ${currentList.length}`;
+            }
+
+            function openLightbox(index) {
+                showPhoto(index);
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            filters.addEventListener('click', e => {
+                const btn = e.target.closest('.quality-filter-btn');
+                if (!btn) return;
+                filters.querySelectorAll('.quality-filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                render(btn.dataset.filter);
+            });
+
+            document.getElementById('qlbClose').addEventListener('click', closeLightbox);
+            document.getElementById('qlbPrev').addEventListener('click', () => showPhoto(currentIndex - 1));
+            document.getElementById('qlbNext').addEventListener('click', () => showPhoto(currentIndex + 1));
+            lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', e => {
+                if (!lightbox.classList.contains('open')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') showPhoto(currentIndex - 1);
+                if (e.key === 'ArrowLeft') showPhoto(currentIndex + 1);
+            });
+
+            render('all');
+        })();
+    </script>
+</body>
+</html>

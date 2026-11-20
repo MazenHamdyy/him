@@ -9,6 +9,14 @@
         { href: 'vision.html', key: 'vision', label: 'الرؤية والرسالة والقيم', icon: 'fa-bullseye' }
     ];
     const isAbout = aboutLinks.some(l => l.key === page);
+
+    const qualityLinks = [
+        { href: 'quality-nars.html', key: 'quality-nars', label: 'المعايير الأكاديمية المتبناة (NARS)', icon: 'fa-award' },
+        { href: 'quality-academic-leaders.html', key: 'quality-academic', label: 'معايير اختيار القيادات الأكاديمية', icon: 'fa-chalkboard-user' },
+        { href: 'quality-admin-leaders.html', key: 'quality-admin', label: 'معايير اختيار القيادات الإدارية', icon: 'fa-briefcase' },
+        { href: 'quality-gallery.html', key: 'quality-gallery', label: 'فعاليات وصور الجودة', icon: 'fa-images' }
+    ];
+    const isQuality = qualityLinks.some(l => l.key === page);
     const homePrefix = page === 'home' ? '' : 'index.html';
 
     const header = `
@@ -40,6 +48,12 @@
                         <a href="#" class="dropdown-toggle ${isAbout ? 'active' : ''}">عن المعهد <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
                             ${aboutLinks.map(l => `<li><a href="${l.href}" class="${l.key === page ? 'current' : ''}"><i class="fas ${l.icon}"></i> ${l.label}</a></li>`).join('')}
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#" class="dropdown-toggle ${isQuality ? 'active' : ''}">جودة <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            ${qualityLinks.map(l => `<li><a href="${l.href}" class="${l.key === page ? 'current' : ''}"><i class="fas ${l.icon}"></i> ${l.label}</a></li>`).join('')}
                         </ul>
                     </li>
                     <li><a href="${homePrefix}#departments">الأقسام</a></li>
@@ -157,6 +171,8 @@
                         <li><a href="dean.html"><i class="fas fa-caret-left"></i> كلمة عميد المعهد</a></li>
                         <li><a href="secretary-general.html"><i class="fas fa-caret-left"></i> كلمة الأمين العام</a></li>
                         <li><a href="vision.html"><i class="fas fa-caret-left"></i> الرؤية والرسالة والقيم</a></li>
+                        <li><a href="quality-nars.html"><i class="fas fa-caret-left"></i> وحدة ضمان الجودة (NARS)</a></li>
+                        <li><a href="quality-gallery.html"><i class="fas fa-caret-left"></i> فعاليات وصور الجودة</a></li>
                         <li><a href="${homePrefix}#departments"><i class="fas fa-caret-left"></i> الأقسام الأكاديمية</a></li>
                         <li><a href="#" data-service="exams"><i class="fas fa-caret-left"></i> منصة الامتحانات</a></li>
                         <li><a href="#" data-service="portal"><i class="fas fa-caret-left"></i> بوابة الطالب الإلكترونية</a></li>
